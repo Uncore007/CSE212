@@ -13,7 +13,19 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
-        return []; // replace this return statement with your own
+        // I know I will need to loop through the array 'length' times
+        // I will need to multiply the number by the current index of the loop
+        // I will need to store the result in the array
+        // I will need to return the array
+
+        double[] new_array = new double[length];
+
+        for (int i = 0; i < length; i++)
+        {
+            new_array[i] = number * (i + 1);
+        }
+
+        return new_array; // replace this return statement with your own
     }
 
     /// <summary>
@@ -29,5 +41,17 @@ public static class Arrays
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
+
+        // First I want to seperate the list into the first and later portion
+        // I will then clear the list
+        // I will then add the two lists back together in the reverse order
+        // I will then return the new list
+
+        List<int> first = data.GetRange(data.Count - amount, amount);
+        List<int> last = data.GetRange(0, data.Count - amount);
+
+        data.Clear();
+        data.AddRange(first);
+        data.AddRange(last);
     }
 }
