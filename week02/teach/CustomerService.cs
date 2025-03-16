@@ -15,6 +15,10 @@ public class CustomerService {
         // Expected Result: 
         Console.WriteLine("Test 1");
 
+        var queue = new CustomerService(2);
+
+        Console.WriteLine(queue.ToString());
+
         // Defect(s) Found: 
 
         Console.WriteLine("=================");
@@ -23,6 +27,9 @@ public class CustomerService {
         // Scenario: 
         // Expected Result: 
         Console.WriteLine("Test 2");
+
+        var queue_test_2 = new CustomerService(2);
+
 
         // Defect(s) Found: 
 
@@ -35,7 +42,7 @@ public class CustomerService {
     private readonly int _maxSize;
 
     public CustomerService(int maxSize) {
-        if (maxSize <= 0)
+        if (maxSize <= 10)
             _maxSize = 10;
         else
             _maxSize = maxSize;
