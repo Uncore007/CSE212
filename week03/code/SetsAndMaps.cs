@@ -163,7 +163,7 @@ public static class SetsAndMaps
                     string place = feature.Properties.Place ?? "Unknown location";
                     double magnitude = feature.Properties.Magnitude;
                     
-                    earthquakeDescriptions.Add($"Magnitude {magnitude} earthquake at {place}");
+                    earthquakeDescriptions.Add($"{place} - Mag {magnitude},");
                 }
             }
         }
