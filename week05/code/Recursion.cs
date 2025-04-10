@@ -178,7 +178,6 @@ public static class Recursion
             return;
         }
 
-
         // UP
         if (maze.IsValidMove(currPath, x, y - 1)) {
             currPath.Add((x, y - 1));
